@@ -15,14 +15,16 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Colors.teal,
         title: const Text(
           'Calculator',
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.w400,),
+          style: TextStyle(fontSize: 20),
         ),
       ),
-      body: const Padding(
+      body: Padding(
         padding: EdgeInsets.all(8.0),
         child: Column(
           children: [
-            TextField(),
+            TextField(
+            ),
+            SizedBox(height: 8),
             TextField(),
           ],
         ),
