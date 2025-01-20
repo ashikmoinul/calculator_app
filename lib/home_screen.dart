@@ -92,13 +92,15 @@ class _HomeScreenState extends State<HomeScreen> {
     _result = numberOne - numberTwo;
     setState(() {});
   }
- void _mul() {
+
+  void _mul() {
     double numberOne = double.tryParse(_numOneTEController.text) ?? 0;
     double numberTwo = double.tryParse(_numTwoTEController.text) ?? 0;
     _result = numberOne * numberTwo;
     setState(() {});
   }
- void _div() {
+
+  void _div() {
     double numberOne = double.tryParse(_numOneTEController.text) ?? 0;
     double numberTwo = double.tryParse(_numTwoTEController.text) ?? 0;
     _result = numberOne / numberTwo;
