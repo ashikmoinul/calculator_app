@@ -43,8 +43,8 @@ class _HomeScreenState extends State<HomeScreen> {
               keyboardType: TextInputType.number,
             ),
             const SizedBox(height: 16),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+            Wrap(
+              alignment: WrapAlignment.center,
               children: [
                 ElevatedButton.icon(
                   onPressed: _add,
@@ -55,6 +55,16 @@ class _HomeScreenState extends State<HomeScreen> {
                   onPressed: _sub,
                   icon: const Icon(Icons.remove),
                   label: const Text('Sub'),
+                ),
+                ElevatedButton.icon(
+                  onPressed: _mul,
+                  icon: const Icon(Icons.star_border),
+                  label: const Text('Mul'),
+                ),
+                ElevatedButton.icon(
+                  onPressed: _div,
+                  icon: const Icon(Icons.ac_unit_outlined),
+                  label: const Text('Div'),
                 ),
               ],
             ),
@@ -73,23 +83,30 @@ class _HomeScreenState extends State<HomeScreen> {
     double numberOne = double.tryParse(_numOneTEController.text) ?? 0;
     double numberTwo = double.tryParse(_numTwoTEController.text) ?? 0;
     _result = numberOne + numberTwo;
-    setState(() {
-
-    });
+    setState(() {});
   }
 
   void _sub() {
     double numberOne = double.tryParse(_numOneTEController.text) ?? 0;
     double numberTwo = double.tryParse(_numTwoTEController.text) ?? 0;
     _result = numberOne - numberTwo;
-    setState(() {
-
-    });
+    setState(() {});
+  }
+ void _mul() {
+    double numberOne = double.tryParse(_numOneTEController.text) ?? 0;
+    double numberTwo = double.tryParse(_numTwoTEController.text) ?? 0;
+    _result = numberOne * numberTwo;
+    setState(() {});
+  }
+ void _div() {
+    double numberOne = double.tryParse(_numOneTEController.text) ?? 0;
+    double numberTwo = double.tryParse(_numTwoTEController.text) ?? 0;
+    _result = numberOne / numberTwo;
+    setState(() {});
   }
 
   @override
   void dispose() {
-
     _numOneTEController.dispose();
     _numTwoTEController.dispose();
     super.dispose();
