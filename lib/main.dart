@@ -14,11 +14,11 @@ class CalculatorApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const HomeScreen(),
       theme: ThemeData(
-        appBarTheme: const AppBarTheme(
+        appBarTheme:  const AppBarTheme(
           color: Colors.teal,
           foregroundColor: Colors.black,
         ),
-        inputDecorationTheme: const InputDecorationTheme(
+        inputDecorationTheme:  const InputDecorationTheme(
           border: OutlineInputBorder(
             borderSide: BorderSide(color: Colors.green),
           ),
@@ -33,6 +33,7 @@ class CalculatorApp extends StatelessWidget {
           ),
           contentPadding: EdgeInsets.all(16),
         ),
+        iconButtonTheme: const IconButtonThemeData(),
       ),
     );
   }
