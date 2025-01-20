@@ -13,9 +13,19 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.teal,
-        title: const Text('Calculator'),
+        title: const Text(
+          'Calculator',
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.w400,),
+        ),
       ),
-      body: Center(
+      body: const Padding(
+        padding: EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            TextField(),
+            TextField(),
+          ],
+        ),
       ),
     );
   }
