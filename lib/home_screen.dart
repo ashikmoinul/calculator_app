@@ -31,6 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
               controller: _numOneTEController,
               decoration: const InputDecoration(
                 hintText: 'Number 1',
+                labelText: 'Number 1',
               ),
               keyboardType: TextInputType.number,
             ),
@@ -39,11 +40,13 @@ class _HomeScreenState extends State<HomeScreen> {
               controller: _numTwoTEController,
               decoration: const InputDecoration(
                 hintText: 'Number 2',
+                labelText: 'Number 2',
               ),
               keyboardType: TextInputType.number,
             ),
             const SizedBox(height: 16),
             Wrap(
+              spacing: 16,
               alignment: WrapAlignment.center,
               children: [
                 ElevatedButton.icon(
